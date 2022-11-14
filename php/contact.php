@@ -13,6 +13,6 @@ if(isset($_POST['submit'])){
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
     mail($from,$subject2,$message2,$headers2);
-    echo "Mail verzonden! Bedankt voor uw bericht" . $first_name . "! Ik zal zo snel mogelijk proberen te reageren.";
+    echo "Mail verzonden! Bedankt voor uw bericht " . $first_name . "\n" . "! Ik zal zo snel mogelijk proberen te reageren.";
     }
 ?>
