@@ -1008,7 +1008,7 @@ html {
 
 /* =================== Footer Starts Here =================== */
 .footer {
-  padding: 50px;
+  padding: 30px;
   background-color: #f1f1f1; }
   @media screen and (max-width: 940px) {
     .footer {
