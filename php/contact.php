@@ -7,7 +7,7 @@ if(isset($_POST['submit'])){
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $first_name . " " . $last_name . " heeft het volgende geschreven:" . "\n\n" . $_POST['message'];
-    $message2 = "Hier is een kopie van uw bericht " . $first_name . "." . "\n\n" . $_POST['message'];
+    $message2 = "Beste " . $first_name . ", u heeft onlangs een bericht achter gelaten op martijngerritsen.online." . "\n" . "Hier is een kopie van uw bericht:" . "\n\n" . $_POST['message'];
 
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
