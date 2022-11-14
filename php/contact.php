@@ -13,6 +13,6 @@ if(isset($_POST['submit'])){
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
     mail($from,$subject2,$message2,$headers2);
-    header('Location: martijngerritsen.online/index.html');
+    header('Location: index.html');
     }
 ?>
