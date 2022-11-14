@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: grey;
+}
+
+header {
+    border-style: solid;
+    border-color: black;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+main {
+    list-style: inside;
+    max-width: 1000px;
+    padding: 5% 5%;
+    margin: 2em auto 5em;
+    border: black solid 1px;
+    border-radius: 3em;
+    background-color: gainsboro;
+    color: black;
+    font-family: Verdana, sans-serif;
+}
+
+p {
+    font-size: 16px;
+    text-align: center;
+    margin: auto;
+    border: 18px ridge #DCEBFF;
+    border-radius: 20px;
+    background-color: lightgray;
+    font-family: "Lucida Sans";
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    max-width: 100%;
+    font-size: 400%;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    color: black;
+}
+
+h3 {
+    /*color: mediumturquoise;*/
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropbtn {
+    background-color: grey;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-inhoud {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-inhoud a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-inhoud a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-inhoud {
+    display: block;
+}
+
+.collapsible-menu label {
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+input#menu {
+    display: none;
+}
+
+.dropdown-links {
+    max-height: 0;
+    overflow: hidden;
+}
+
+input:checked ~ .dropdown-links {
+    max-height: 100%;
+}
+
+footer {
+    border-top: solid black;
+    color: black;
+    text-align: center;
+}
+
+input[type=text], [type=email], [type=tel], [type=password], [type=project], select {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+input[type=submit], [type=reset] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: silver;
+}
+
+.contacttext {
+    margin-left: 10px;
+}
+
+form {
+    line-height: 2;
+    margin: 2em 0;
+    width: 70%;
+    border: darkslategrey 1px solid;
+    border-radius: 2em;
+    text-align: left;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 2em;
+}
+
+textarea {
+    width: 90%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+input[type=submit], input[type=reset] {
+    width: 40%;
+    min-width: 10em;
+    margin: 2em 1em 0 0;
+    padding-right: 0.2em;
+    padding-left: 0.2em;
+}
+
+label {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+    .kaart {
+        width: 200px;
+        height: 100px;
+    }
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
