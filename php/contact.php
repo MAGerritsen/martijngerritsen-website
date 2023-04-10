@@ -1,18 +1,38 @@
 <?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
 if(isset($_POST['submit'])){
-    $to = "martijn.gerritsen@kpnmail.nl";
-    $from = $_POST['email'];
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
-    $subject = "U heeft een nieuw bericht via martijngerritsen.com !";
-    $subject2 = "Kopie van uw bericht op martijngerritsen.com";
+    $email = $_POST["email"];
     $message = $first_name . " " . $last_name . " heeft het volgende geschreven:" . "\n\n" . $_POST['message'];
-    $message2 = "Beste " . $first_name . ", u heeft onlangs een bericht achtergelaten op martijngerritsen.com." . "\n" . "Hier is een kopie van uw bericht:" . "\n\n" . $_POST['message'];
 
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2);
-    header('Location: ../index.html');
-    }
+    require "../vendor/autoload.php";
+
+    $mail = new PHPMailer(true);
+
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
+    $mail->isSMTP();
+    $mail->SMTPAuth = true;
+
+    $mail->Host = "mail.kpnmail.nl";
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port = 587;
+
+    $mail->Username = "martijn.gerritsen@kpnmail.nl";
+    include '../randomfile.php';
+    $mail->Password = $magicstuf;
+    
+    $mail->setFrom($email, $first_name);
+    $mail->addAddress("martijn.gerritsen@kpnmail.nl", "Martijn");
+
+    $mail->Body = $message;
+
+    $mail->send();
+
+    header("Location: ../index.html");
+}
 ?>
